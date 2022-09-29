@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
-    <title>Index no tan loco</title>
+    <title>Listado</title>
 
 </head>
 
@@ -20,6 +20,8 @@
         <form class="col-4" method="POST">
 
             <h3 class="text-center2">Listado de Estudiantes</h3>
+            <button class="button1"><a href="pagina/Input.php">Nuevo</a></button>
+
             <table class="tablas-usuarios">
                 <thead>
                     <tr>
@@ -43,7 +45,7 @@
                 <td><?php echo $estudiante['notas'] ?></td>
                 <td><a href="pagina/ModificarEstudiantes_pagina.php?id=<?php echo $estudiante['id'] ?>" class="btn btn-secondary">Editar</a></td>
                 <td><a href="controlador/eliminar_estudiante_controlador.php?id=<?php echo $estudiante['id'] ?>" class="btn btn-danger"> Eliminar</a></td>
-                
+
             </tr>
         <?php endforeach; ?>
     </tbody>
