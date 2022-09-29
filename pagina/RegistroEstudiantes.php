@@ -41,8 +41,5 @@
                                 <input type="text" class="tablas-input" name="notas">
                         </div>
                         <button type="submit" class="btn btn-primary" name="boton_registro" value="enviar">Enviar</button>
-                        <p>
-                                <!-- Boton de volver, se pueden llevar la "a" y la "/a" para reposicionarlo -->
-                        </p>
                 </form>
                 <button class="button1"><a href="../GestionDeEstudiantes.php">Volver</a></button>
