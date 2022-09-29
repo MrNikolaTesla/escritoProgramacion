@@ -11,7 +11,7 @@ if(!empty($_POST["boton_registro"])){
         $notas = $_POST["notas"];
         $telefono = $_POST["telefono"];
 
-        $repetido = $estudiante->get_estudiante($nombre, $grupo, $notas);
+        $repetido = $estudiante->rep_estudiante($nombre, $grupo, $notas);
 
         if($repetido!=null){
             $estado = 0;
