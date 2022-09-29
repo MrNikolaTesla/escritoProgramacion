@@ -6,3 +6,11 @@
   body {
 
   }
+  td, th {
+    text-align: left;
+    padding: 8px;
+    max-width: 15vw;
+    height: 50px;
+    width: fit-content;
+
+  }
