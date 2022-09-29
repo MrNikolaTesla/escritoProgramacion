@@ -5,20 +5,49 @@
   color: black;
   margin: 4px;
 }
+
 table {
   width: 80vw;
   height: 20vh;
   border: rgba(85, 81, 81, 0.445) 1px solid;
 }
 
+.tablas-input {
+  display: block;
+  width: 25vw;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 2px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: .375rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
 
 .tabla-borde {
   text-align: left;
   padding: 8px;
   height: 50px;
-  width:10vw;
+  width: 10vw;
   border: rgba(26, 26, 27, 0.144) 1px solid;
+}
 
+.boton-nuevo {
+  align-items: center;
+  background-color: #4096f8;
+  border-radius: 6px;
+  border-style: none;
+  color: #fff;
+  line-height: 1.15;
+  margin: 4px;
+  padding: 8px 12px;
+  text-align: center;
 }
 
 .boton-editar {
@@ -45,9 +74,35 @@ table {
   text-align: center;
 }
 
-.boton-nuevo {
+.boton-volver {
+
   align-items: center;
   background-color: #4096f8;
+  border-radius: 6px;
+  border-style: none;
+  color: rgb(0, 0, 0);
+  line-height: 1.15;
+  margin: 4px;
+  padding: 8px 12px;
+  text-align: center;
+
+}
+
+.boton-enviar {
+  align-items: center;
+  background-color: #408852;
+  border-radius: 6px;
+  border-style: none;
+  color: #fff;
+  line-height: 1.15;
+  margin: 4px;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+.boton-modificar {
+  align-items: center;
+  background-color: #408852;
   border-radius: 6px;
   border-style: none;
   color: #fff;
@@ -61,4 +116,16 @@ a:link,
 a:visited,
 a:active {
   text-decoration: none;
+}
+
+.div-registro {
+  margin: 8px;
+}
+
+.h3-registro {
+  margin: 8px;
+}
+
+.form-registro {
+  margin: 8px;
 }

@@ -23,7 +23,7 @@
             <button class="boton-nuevo"><a href="pagina/RegistroEstudiantes.php" style="color:white;">Nuevo</a></button>
             <table id="customers">
                 <thead class="tabla-borde">
-                    <tr >
+                    <tr>
                         <th class="tabla-borde">Nombre</th>
                         <th class="tabla-borde">Grupo</th>
                         <th class="tabla-borde">Notas</th>

@@ -1,17 +1,19 @@
 <?php
-class Estudiante{
+class Estudiante
+{
 
     private $con;
 
-    public function __construct() {
-    require_once("conexion.php");
-    $this->con=conectar::conexion();
+    public function __construct()
+    {
+        require_once("conexion.php");
+        $this->con = conectar::conexion();
     }
 
     public function update_estudiante($id, $nombre, $grupo, $notas)
     {
         $sql = "UPDATE datos set nombre = '$nombre', grupo = '$grupo', notas = '$notas' WHERE id = $id";
-        $query = mysqli_query($this->con,$sql);
+        $query = mysqli_query($this->con, $sql);
         return $query;
     }
 
@@ -54,6 +56,4 @@ class Estudiante{
         $query = mysqli_query($this->con, $sql);
         return $query;
     }
-    }
-
-?>
+}

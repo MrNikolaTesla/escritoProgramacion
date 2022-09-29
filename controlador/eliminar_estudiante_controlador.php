@@ -14,4 +14,3 @@ if($estado==1) {
 }else{
     header("Location: ../GestionDeEstudiantes.php");
 }
-?>

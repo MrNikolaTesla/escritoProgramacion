@@ -7,6 +7,6 @@ CREATE TABLE `datos` (
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 INSERT INTO `datos` (`id`, `nombre`, `grupo`, `notas`) VALUES
-(1, 'Martín Mainentti', '3ro BY', 12),
+(1, 'Martin Mainentti', '3ro BY', 12),
 (2, 'Lautaro Galeazzi', '3ro BY', 8),
-(3, 'Carlos Rodríguez', '3ro BY', 10);
+(3, 'Carlos Rodriguez', '3ro BY', 10);

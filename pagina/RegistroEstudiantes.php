@@ -1,45 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=devide-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../assets/styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=devide-width, initial-scale=1.0">
-    <title>Index no tan loco</title>
-    <style>
-.tablas-input{
-        display: block;
-  width: 25vw;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 2px solid #ced4da;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border-radius: .375rem;
-  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-}
-</style>
+        <title>Registro</title>
 </head>
-<form class="col-4" method="POST">
-                        <h3 class="text-center2">Registro de Estudiante</h3>
-                        <?php require_once("../controlador/ControladorRegistroEstudiante.php"); ?>
-                        <div class="mb-3">
-                                <label class="form-label">Nombre/s y Apellido/s</label>
-                                <input type="text" class="tablas-input" name="nombre">
-                        </div>
-                        <div class="mb-3">
-                                <label class="form-label">Grupo</label>
-                                <input type="text" class="tablas-input" name="grupo">
-                        </div>
-                        <div class="mb-3">
-                                <label class="form-label">Notas</label>
-                                <input type="text" class="tablas-input" name="notas">
-                        </div>
-                        <button type="submit" class="btn btn-primary" name="boton_registro" value="enviar">Enviar</button>
-                </form>
-                <button class="button1"><a href="../GestionDeEstudiantes.php">Volver</a></button>
+
+<body>
+        <form class="col-4" method="POST">
+                <h3 class="h3-registro">Registro de Estudiante</h3>
+                <?php require_once("../controlador/ControladorRegistroEstudiante.php"); ?>
+                <div class="div-registro">
+                        <label class="form-label">Nombre/s y Apellido/s</label>
+                        <input type="text" class="tablas-input" name="nombre" maxlength="50">
+                </div>
+                <div class="div-registro">
+                        <label class="form-label">Grupo</label>
+                        <input type="text" class="tablas-input" name="grupo" maxlength="10">
+                </div>
+                <div class="div-registro">
+                        <label class="form-label">Notas</label>
+                        <input type="text" class="tablas-input" name="notas" maxlength="2">
+                </div>
+                <button class="boton-volver"><a href="../GestionDeEstudiantes.php" style="color:white;">Volver</a></button>
+                <button type="submit" class="boton-enviar" name="boton_registro" value="enviar">Registrar</button>
+        </form>
+</body>
+
+</html>
