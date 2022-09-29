@@ -12,7 +12,7 @@
 
 <body>
         <form method="POST">
-                <h3 class="text-center">Modificacion de Estudiante</h3>
+                <h3 class="text-center2">Modificacion de Estudiante</h3>
                 <?php require_once("../controlador/ControladorModificarEstudiante.php"); ?>
                 <?php foreach ($estudiante_modificar as $estudiante) { ?>
                         <div class="mb-3">
