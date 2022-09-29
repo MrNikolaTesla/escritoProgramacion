@@ -21,16 +21,10 @@ if(!empty($_POST["modificacion"])){
         
 
 if($estado==1) {
-    //session_start(); 
-    //$_SESSION['message'] = 'Estudiante modificado correctamente';
     header("Location: ../GestionDeEstudiantes.php");
 }else if($repetido!=null){
-    //session_start(); 
-    //$_SESSION['message'] = 'Producto equivalente ya encontrado en el sistema.';
     header("Location: ../GestionDeEstudiantes.php");
 }else{
-    //session_start(); 
-    //$_SESSION['message'] = 'Proveedor no modificado, algo ha fallado.';
     header("Location: ../GestionDeEstudiantes.php");
 }
 }
