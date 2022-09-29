@@ -3,9 +3,6 @@
     $estudiante = new Estudiante();
 if(!empty($_POST["modificacion"])){
     if(!empty($_POST["nombre"]) and !empty($_POST["grupo"]) and !empty($_POST["notas"])) {
-        
-        //echo "<div class="alert alert-success">Alumno dado de alta correctamente</div>";
-
         $id = $_POST["id"];
         $nombre = $_POST["nombre"];
         $grupo = $_POST["grupo"];

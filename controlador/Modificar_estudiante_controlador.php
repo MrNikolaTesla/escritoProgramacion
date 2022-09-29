@@ -1,6 +1,7 @@
 <?php
 
 require_once("../modelo/Estudiante.php");
+
 session_start();
 $_SESSION['mod_estudiante'] = $id = $_GET['id'];
 
