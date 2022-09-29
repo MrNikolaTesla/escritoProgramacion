@@ -19,7 +19,11 @@
         <form class="col-4" method="POST">
 
             <h3 class="text-center2">Listado de Estudiantes</h3>
+<<<<<<< HEAD
             <button class="boton-22"><a href="pagina/Input.php">Nuevo</a></button>
+=======
+            <button class="button1"><a href="pagina/RegistroEstudiantes.php">Nuevo</a></button>
+>>>>>>> 1b2e57867291192f057f04ab93f22fc2519925cb
 
             <table class="tablas-usuarios">
                 <thead>
