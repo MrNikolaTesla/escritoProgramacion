@@ -14,35 +14,33 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div>
+        <!-- INICIO FORMULARIO ALTA -->
         <form class="col-4" method="POST">
 
             <h3 class="text-center2">Listado de Estudiantes</h3>
 
-            <button class="boton-22" ><a href="pagina/RegistroEstudiantes.php" style="color:white;">Nuevo</a></button>
-            <table class="tablas-usuarios">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Grupo</th>
-                        <th>Notas</th>
-                        <th>Editar</th>
-                        <th>Eliminar</th>
+            <button class="boton-nuevo"><a href="pagina/RegistroEstudiantes.php" style="color:white;">Nuevo</a></button>
+            <table id="customers">
+                <thead class="tabla-borde">
+                    <tr >
+                        <th class="tabla-borde">Nombre</th>
+                        <th class="tabla-borde">Grupo</th>
+                        <th class="tabla-borde">Notas</th>
+                        <th class="tabla-borde">Editar</th>
+                        <th class="tabla-borde">Eliminar</th>
                     <tr>
                 </thead>
     </div>
     </form>
-    <tbody>
-
+    <tbody class="tabla-borde">
         <?php foreach ($matrizEstudiante as $estudiante) : ?>
-            <tr>
-                <td><?php echo $estudiante['id'] ?></td>
-                <td><?php echo $estudiante['nombre'] ?></td>
-                <td><?php echo $estudiante['grupo'] ?></td>
-                <td><?php echo $estudiante['notas'] ?></td>
-                <td><a href="pagina/ModificarEstudiantes_pagina.php?id=<?php echo $estudiante['id'] ?>" class="btn btn-secondary">Editar</a></td>
-                <td><a href="controlador/eliminar_estudiante_controlador.php?id=<?php echo $estudiante['id'] ?>" class="btn btn-danger"> Eliminar</a></td>
+            <tr class="tabla-borde">
+                <td class="tabla-borde"><?php echo $estudiante['nombre'] ?></td>
+                <td class="tabla-borde"><?php echo $estudiante['grupo'] ?></td>
+                <td class="tabla-borde"><?php echo $estudiante['notas'] ?></td>
+                <td class="tabla-borde"><a href="pagina/ModificarEstudiantes_pagina.php?id=<?php echo $estudiante['id'] ?>" class="boton-editar">Editar</a></td>
+                <td class="tabla-borde"><a href="controlador/eliminar_estudiante_controlador.php?id=<?php echo $estudiante['id'] ?>" class="boton-eliminar"> Eliminar</a></td>
 
             </tr>
         <?php endforeach; ?>
