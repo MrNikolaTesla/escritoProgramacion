@@ -26,28 +26,23 @@
 </style>
 </head>
 <form class="col-4" method="POST">
-                        <h3 class="text-center2">Registro de Proveedores</h3>
-                        <?php require_once("../vista/mensaje_gestor.php"); ?>
-                        <?php require_once("../controlador/ControladorRegistroProveedor.php"); ?>
+                        <h3 class="text-center2">Registro de Estudiante</h3>
+                        <?php require_once("../controlador/ControladorRegistroEstudiante.php"); ?>
                         <div class="mb-3">
                                 <label class="form-label">Nombre/s y Apellido/s</label>
-                                <input type="text" class="tablas-input" name="nombre_apellido">
+                                <input type="text" class="tablas-input" name="nombre">
                         </div>
                         <div class="mb-3">
-                                <label class="form-label">Empresa</label>
-                                <input type="text" class="tablas-input" name="empresa">
+                                <label class="form-label">Grupo</label>
+                                <input type="text" class="tablas-input" name="grupo">
                         </div>
                         <div class="mb-3">
-                                <label class="form-label">Productos</label>
-                                <input type="text" class="tablas-input" name="productos">
-                        </div>
-                        <div class="mb-3">
-                                <label class="form-label">Telefono</label>
-                                <input type="text" class="tablas-input" name="telefono">
+                                <label class="form-label">Notas</label>
+                                <input type="text" class="tablas-input" name="notas">
                         </div>
                         <button type="submit" class="btn btn-primary" name="boton_registro" value="enviar">Enviar</button>
                         <p>
                                 <!-- Boton de volver, se pueden llevar la "a" y la "/a" para reposicionarlo -->
                         </p>
                 </form>
-                <button class="button1"><a href="../GestionDeProveedores.php">Volver</a></button>
+                <button class="button1"><a href="../GestionDeEstudiantes.php">Volver</a></button>

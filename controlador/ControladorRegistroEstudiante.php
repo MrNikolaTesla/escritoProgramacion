@@ -6,7 +6,6 @@ if(!empty($_POST["boton_registro"])){
         $nombre = $_POST["nombre"];
         $grupo = $_POST["grupo"];
         $notas = $_POST["notas"];
-        $telefono = $_POST["telefono"];
         $repetido = $estudiante->rep_estudiante($nombre, $grupo, $notas);
 
         if($repetido!=null){
@@ -18,9 +17,9 @@ if(!empty($_POST["boton_registro"])){
         }
 
 if($estado==1) {
-    echo '<div class="alert alert-success alert-dismissible fade show" role="alert">Proveedor registrado correctamente!</div>';
+    echo '<div class="alert alert-success alert-dismissible fade show" role="alert">Estudiante registrado correctamente!</div>';
 }else if($repetido!=null){
-    echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">El proveedor ya ha sido agregado al sistema previamente.</div>';
+    echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">El estudiante ya ha sido agregado al sistema previamente.</div>';
 }else{
     echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">Alguno de los campos está vacio.</div>';
 }
