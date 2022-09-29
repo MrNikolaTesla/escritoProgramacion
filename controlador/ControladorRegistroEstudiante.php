@@ -3,23 +3,19 @@
     $estudiante = new Estudiante();
 if(!empty($_POST["boton_registro"])){
     if(!empty($_POST["nombre"]) and !empty($_POST["grupo"]) and !empty($_POST["notas"])) {
-        
-        //echo "<div class="alert alert-success">Alumno dado de alta correctamente</div>";
-
         $nombre = $_POST["nombre"];
         $grupo = $_POST["grupo"];
         $notas = $_POST["notas"];
         $telefono = $_POST["telefono"];
-
-        $repetido = $estudiante->get_estudiante($nombre, $grupo, $notas);
+        $repetido = $estudiante->rep_estudiante($nombre, $grupo, $notas);
 
         if($repetido!=null){
             $estado = 0;
-    }
+        }
     
-    if ($repetido==null){
-        $estado = $estudiante->set_estudiante($nombre, $grupo, $notas);
-    }
+        if ($repetido==null){
+            $estado = $estudiante->set_estudiante($nombre, $grupo, $notas);
+        }
 
 if($estado==1) {
     echo '<div class="alert alert-success alert-dismissible fade show" role="alert">Proveedor registrado correctamente!</div>';
