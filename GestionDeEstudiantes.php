@@ -26,7 +26,7 @@
                 <div class="col-8 ">
                         <!-- No se cual es esta class porque es del boostrap -->
                         <!-- INICIO TABLA LISTAR -->
-                        <?php require_once("controlador/Proveedor_controlador.php"); ?>
+                        <?php require_once("controlador/Estudiante_controlador.php"); ?>
                         <!-- FIN TABLA LISTAR -->
                 </div>
         </div>

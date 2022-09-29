@@ -13,13 +13,6 @@
 </head>
 
 <body>
-    <?php
-
-    foreach ($matrizProveedor as $registro) {
-
-        //echo $registro['matricula'] . " - " . $registro['nombre']. " <br> " ;
-    }
-    ?>
     <div class="container-fluid">
         <!-- No se cual es esta class porque es del boostrap -->
         <!-- INICIO FORMULARIO ALTA -->
@@ -33,7 +26,6 @@
                         <th>Nombre y Apellido</th>
                         <th>Empresa</th>
                         <th>Productos</th>
-                        <th>Telefono</th>
                         <th>Eliminar</th>
                         <th>Modificar</th>
                     <tr>
@@ -42,15 +34,14 @@
     </form>
     <tbody>
 
-        <?php foreach ($matrizProveedor as $proveedor) : ?>
+        <?php foreach ($matrizEstudiante as $estudiante) : ?>
             <tr>
-                <td><?php echo $proveedor['id_proveedor'] ?></td>
-                <td><?php echo $proveedor['nombre_apellido'] ?></td>
-                <td><?php echo $proveedor['empresa'] ?></td>
-                <td><?php echo $proveedor['productos'] ?></td>
-                <td><?php echo $proveedor['telefono'] ?></td>
-                <td><a href="controlador/eliminar_Proveedor_controlador.php?id=<?php echo $proveedor['id_proveedor'] ?>" class="btn btn-danger"> Eliminar</a></td>
-                <td><a href="pagina/ModificarProveedor_pagina.php?id=<?php echo $proveedor['id_proveedor'] ?>" class="btn btn-secondary">Modificar</a></td>
+                <td><?php echo $estudiante['id'] ?></td>
+                <td><?php echo $estudiante['nombre'] ?></td>
+                <td><?php echo $estudiante['grupo'] ?></td>
+                <td><?php echo $estudiante['notas'] ?></td>
+                <td><a href="controlador/eliminar_estudiante_controlador.php?id=<?php echo $estudiante['id'] ?>" class="btn btn-danger"> Eliminar</a></td>
+                <td><a href="pagina/ModificarEstudiantes_pagina.php?id=<?php echo $estudiante['id'] ?>" class="btn btn-secondary">Modificar</a></td>
             </tr>
         <?php endforeach; ?>
     </tbody>
