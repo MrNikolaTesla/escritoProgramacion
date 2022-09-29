@@ -7,7 +7,6 @@ if(!empty($_POST["modificacion"])){
         $nombre = $_POST["nombre"];
         $grupo = $_POST["grupo"];
         $notas = $_POST["notas"];
-
         $repetido = $estudiante->rep_estudiante($nombre, $grupo, $notas);
 
         if($repetido!=null){
@@ -17,8 +16,6 @@ if(!empty($_POST["modificacion"])){
     if ($repetido==null){
         $estado = $estudiante->update_estudiante($id, $nombre, $grupo, $notas);
     }
-
-        
 
 if($estado==1) {
     header("Location: ../GestionDeEstudiantes.php");

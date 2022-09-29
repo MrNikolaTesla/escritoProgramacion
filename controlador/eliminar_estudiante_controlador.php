@@ -11,7 +11,6 @@ if($estado==1) {
 }else{
     header("Location: ../GestionDeEstudiantes.php");
 }
-
 }else{
     header("Location: ../GestionDeEstudiantes.php");
 }
