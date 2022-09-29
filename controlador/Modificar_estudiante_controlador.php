@@ -2,7 +2,7 @@
 
 require_once("../modelo/Estudiante.php");
 session_start();
-$_SESSION['mod_proveedor'] = $id = $_GET['id'];
+$_SESSION['mod_estudiante'] = $id = $_GET['id'];
 
 $estudiante = new Estudiante();
 

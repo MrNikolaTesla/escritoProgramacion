@@ -27,14 +27,14 @@ class Estudiante{
 
     public function set_estudiante($nombre, $grupo, $notas)
     {
-        $sql = "INSERT INTO datos (nombre, grupo, notas) VALUES ('$nombre', '$grupo', '$productos', '$telefono')";
+        $sql = "INSERT INTO datos (nombre, grupo, notas) VALUES ('$nombre', '$grupo', '$notas')";
         $query = mysqli_query($this->con, $sql);
         return $query;
     }
 
-    public function rep_estudiante($nombre_apellido, $empresa, $productos, $telefono)
+    public function rep_estudiante($nombre, $grupo, $notas)
     {
-        $sql = "SELECT * FROM proveedor WHERE nombre_apellido LIKE '%$nombre_apellido%' and empresa = '$empresa' and productos = '$productos' and telefono = '$telefono'";
+        $sql = "SELECT * FROM datos WHERE nombre LIKE '%$nombre%' and grupo = '$grupo' and notas = '$notas'";
         $query = mysqli_query($this->con, $sql);
         $result = mysqli_fetch_array($query);
         return $result;
@@ -42,7 +42,7 @@ class Estudiante{
 
     public function get_data()
     {
-        $id = $_SESSION['mod_proveedor'];
+        $id = $_SESSION['mod_estudiante'];
         $sql = "SELECT * FROM datos WHERE id = $id";
         $query = mysqli_query($this->con, $sql);
         return $query;
@@ -50,7 +50,7 @@ class Estudiante{
 
     public function eliminar_estudiante($id)
     {
-        $sql = "DELETE FROM proveedor WHERE id_proveedor = $id";
+        $sql = "DELETE FROM datos WHERE id = $id";
         $query = mysqli_query($this->con, $sql);
         return $query;
     }

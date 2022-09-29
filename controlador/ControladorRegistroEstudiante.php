@@ -1,43 +1,32 @@
 <?php
-    require_once("../modelo/RegistroProveedor_modelo.php");
-    require_once("../modelo/Repe_Proveedor_modelo.php");
-    $registroProveedor = new RegistroProveedor_modelo();
-    $repe_proveedor = new Repe_Proveedor_modelo();
+    require_once("../modelo/Estudiante.php");
+    $estudiante = new Estudiante();
 if(!empty($_POST["boton_registro"])){
-    if(!empty($_POST["nombre_apellido"]) and !empty($_POST["empresa"]) and !empty($_POST["productos"]) and !empty($_POST["telefono"])) {
+    if(!empty($_POST["nombre"]) and !empty($_POST["grupo"]) and !empty($_POST["notas"])) {
         
         //echo "<div class="alert alert-success">Alumno dado de alta correctamente</div>";
 
-        $nombre_apellido = $_POST["nombre_apellido"];
-        $empresa = $_POST["empresa"];
-        $productos = $_POST["productos"];
+        $nombre = $_POST["nombre"];
+        $grupo = $_POST["grupo"];
+        $notas = $_POST["notas"];
         $telefono = $_POST["telefono"];
 
-        $repetido = $repe_proveedor->get_proveedor($nombre_apellido, $empresa, $productos, $telefono);
+        $repetido = $estudiante->get_estudiante($nombre, $grupo, $notas);
 
         if($repetido!=null){
             $estado = 0;
     }
     
     if ($repetido==null){
-        $estado = $registroProveedor->set_proveedor($nombre_apellido, $empresa, $productos, $telefono);
+        $estado = $estudiante->set_estudiante($nombre, $grupo, $notas);
     }
 
 if($estado==1) {
-    echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-    Proveedor registrado correctamente!
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>';
+    echo '<div class="alert alert-success alert-dismissible fade show" role="alert">Proveedor registrado correctamente!</div>';
 }else if($repetido!=null){
-    echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-    El proveedor ya ha sido agregado al sistema previamente.
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>';
+    echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">El proveedor ya ha sido agregado al sistema previamente.</div>';
 }else{
-    echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-    Alguno de los campos está vacio.
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>';
+    echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">Alguno de los campos está vacio.</div>';
 }
 }
 }
