@@ -15,7 +15,6 @@
 
 <body>
     <div class="container-fluid">
-        <!-- INICIO FORMULARIO ALTA -->
         <form class="col-4" method="POST">
 
             <h3 class="text-center2">Listado de Estudiantes</h3>
