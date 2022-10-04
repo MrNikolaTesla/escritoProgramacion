@@ -12,6 +12,7 @@
 
 <body>
         <div class="container-fluid">
+                <!-- Devuelve el listado de estudiantes,además del botón para añadir estudiantes -->
                 <?php require_once("controlador/Estudiante_controlador.php"); ?>
         </div>
 

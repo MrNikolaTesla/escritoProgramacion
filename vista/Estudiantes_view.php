@@ -20,6 +20,7 @@
 
             <h3 class="text-center2">Listado de Estudiantes</h3>
 
+            <!-- Lleva al registro de estudiantes -->
             <button class="boton-nuevo"><a href="pagina/RegistroEstudiantes.php" style="color:white;">Nuevo</a></button>
             <table id="customers">
                 <thead class="tabla-borde">
@@ -34,14 +35,15 @@
     </div>
     </form>
     <tbody class="tabla-borde">
+        <!-- Toma una fila del array a la vez, así por cada fila,les asigna el nombre de variable $estudiante -->
         <?php foreach ($matrizEstudiante as $estudiante) : ?>
             <tr class="tabla-borde">
                 <td class="tabla-borde"><?php echo $estudiante['nombre'] ?></td>
                 <td class="tabla-borde"><?php echo $estudiante['grupo'] ?></td>
                 <td class="tabla-borde"><?php echo $estudiante['notas'] ?></td>
+                <!-- La referencia del link, se lleva el valor de id para modificar/eliminar el estudiante-->
                 <td class="tabla-borde"><a href="pagina/ModificarEstudiantes_pagina.php?id=<?php echo $estudiante['id'] ?>" class="boton-editar">Editar</a></td>
                 <td class="tabla-borde"><a href="controlador/eliminar_estudiante_controlador.php?id=<?php echo $estudiante['id'] ?>" class="boton-eliminar"> Eliminar</a></td>
-
             </tr>
         <?php endforeach; ?>
     </tbody>

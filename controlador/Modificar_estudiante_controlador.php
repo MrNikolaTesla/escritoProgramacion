@@ -2,11 +2,14 @@
 
 require_once("../modelo/Estudiante.php");
 
-session_start();
-$_SESSION['mod_estudiante'] = $id = $_GET['id'];
+/* Chequea si un valor ha sido colocado, en este caso chequea el valor de id */
+if (isset($_GET['id'])) {
 
-$estudiante = new Estudiante();
+    $id = $_GET['id']; // En $id se guarda la id chequeada
 
-$estudiante_modificar = $estudiante->get_data();
+    $estudiante = new Estudiante(); // Instancia nuevamente el objeto
 
-require_once("../vista/Modificar_view.php");
+    $estudiante_modificar = $estudiante->get_data($id); //Se lleva la fila de la BD, en la que id = id
+
+    require_once("../vista/Modificar_view.php");
+}

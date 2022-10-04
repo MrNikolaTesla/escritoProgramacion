@@ -6,7 +6,7 @@ class Estudiante
 
     public function __construct()
     {
-        require_once("conexion.php");
+        require_once("conexion.php"); //conexión
         $this->con = conectar::conexion();
     }
 
@@ -17,14 +17,17 @@ class Estudiante
         return $query;
     }
 
-    public function listar_estudiantes()
+    /* Saca toda la información de los estudiantes cargados en la base de datos */
+    public function listar_estudiantes() 
     {
         $sql = "SELECT * FROM datos";
         $query = mysqli_query($this->con, $sql);
         while ($filas = mysqli_fetch_array($query)) {
-            $this->estudiante[] = $filas;
+
+        /* Crea una variable estudiante, la cual es un array. Ordena los valores en filas de array */
+            $this->estudiante[] = $filas; 
         }
-        return $this->estudiante;
+        return $this->estudiante; //Devuelve el array
     }
 
     public function set_estudiante($nombre, $grupo, $notas)
@@ -42,9 +45,8 @@ class Estudiante
         return $result;
     }
 
-    public function get_data()
+    public function get_data($id)
     {
-        $id = $_SESSION['mod_estudiante'];
         $sql = "SELECT * FROM datos WHERE id = $id";
         $query = mysqli_query($this->con, $sql);
         return $query;
