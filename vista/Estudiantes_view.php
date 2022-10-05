@@ -35,34 +35,25 @@
                 });
             });
         });
-// Confirmación de eliminar usuario
+        // Confirmación de eliminar usuario
         function asegurar() {
             rc = confirm("¿Seguro que desea Eliminar al estudiante?");
             return rc;
         }
-<<<<<<< Updated upstream
 
-//ESTO https://www.javatpoint.com/sweetalert
-        sweetAlert(
-  {
-    title: "Are you sure?",
-    text: "You will not be able to recover this imaginary file!",
-    type: "warning",   
-    showCancelButton: true,   
-    confirmButtonColor: "#DD6B55",
-    confirmButtonText: "Yes, delete it!"
-  }, 
-  deleteIt()
-);
+        //ESTO https://www.javatpoint.com/sweetalert
+        sweetAlert({
+                title: "Are you sure?",
+                text: "You will not be able to recover this imaginary file!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, delete it!"
+            },
+            deleteIt()
+        );
     </script>
-=======
-        </script>
-        <script language="VBScript">
-        Sub myAlert(title, content)
-        MsgBox content, 0, title 
-        End Sub 
-        </script>
->>>>>>> Stashed changes
+
 </head>
 
 <body>
@@ -113,7 +104,7 @@
                 <tbody>
                     <?php foreach ($matrizEstudiante as $estudiante) : ?>
                         <tr>
-                            <td><input class="customcheckbox" type="checkbox" value="" id="flexCheckDefault1"/>&nbsp;&nbsp;<?php echo $estudiante['id'] ?></td>
+                            <td><input class="customcheckbox" type="checkbox" value="" id="flexCheckDefault1" />&nbsp;&nbsp;<?php echo $estudiante['id'] ?></td>
                             <td><?php echo $estudiante['nombre'] ?></td>
                             <td><?php echo $estudiante['grupo'] ?></td>
                             <td><?php echo $estudiante['notas'] ?></td>
