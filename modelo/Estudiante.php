@@ -18,14 +18,14 @@ class Estudiante
     }
 
     /* Saca toda la información de los estudiantes cargados en la base de datos */
-    public function listar_estudiantes() 
+    public function listar_estudiantes()
     {
         $sql = "SELECT * FROM datos";
         $query = mysqli_query($this->con, $sql);
         while ($filas = mysqli_fetch_array($query)) {
 
-        /* Crea una variable estudiante, la cual es un array. Ordena los valores en filas de array */
-            $this->estudiante[] = $filas; 
+            /* Crea una variable estudiante, la cual es un array. Ordena los valores en filas de array */
+            $this->estudiante[] = $filas;
         }
         return $this->estudiante; //Devuelve el array
     }

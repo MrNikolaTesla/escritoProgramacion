@@ -28,11 +28,11 @@ if (!empty($_POST["modificacion"])) {
         if ($estado == 1) {
             header("Location: ../GestionDeEstudiantes.php");
 
-        /* Si la solicitud no fue procesada correctamente */
+            /* Si la solicitud no fue procesada correctamente */
         } else if ($repetido != null) {
             header("Location: ../GestionDeEstudiantes.php");
 
-        /*Si la id no está seteada */
+            /*Si la id no está seteada */
         } else {
             header("Location: ../GestionDeEstudiantes.php");
         }

@@ -2,7 +2,7 @@
 require_once("../modelo/Estudiante.php");
 
 /* Se podría guardar en sesión, pero al no implementar, se crea en cada instancia un nuevo objeto */
-$estudiante = new Estudiante(); 
+$estudiante = new Estudiante();
 
 /* Chequea si un valor ha sido colocado, en este caso chequea el valor de id */
 if (isset($_GET['id'])) {
@@ -14,12 +14,12 @@ if (isset($_GET['id'])) {
     if ($estado == 1) {
         header("Location: ../GestionDeEstudiantes.php");
 
-    /* Si la solicitud no fue procesada correctamente */
+        /* Si la solicitud no fue procesada correctamente */
     } else {
         header("Location: ../GestionDeEstudiantes.php");
     }
 
     /*Si la id no está seteada */
-    } else {
+} else {
     header("Location: ../GestionDeEstudiantes.php");
 }

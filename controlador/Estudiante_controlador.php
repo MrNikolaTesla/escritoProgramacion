@@ -7,6 +7,6 @@ require_once("modelo/Estudiante.php");
 $estudiantes = new Estudiante();
 
 /* Variable utilizada en estudiantes_view.php, el valor de $matriz estudiante va a ser a la función listarestudiantes */
-$matrizEstudiante = $estudiantes->listar_estudiantes(); 
+$matrizEstudiante = $estudiantes->listar_estudiantes();
 
 require_once("vista/Estudiantes_view.php");

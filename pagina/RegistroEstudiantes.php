@@ -2,34 +2,86 @@
 <html lang="es">
 
 <head>
+        <!-- Required meta tags -->
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=devide-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../assets/styles.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <title>Registro</title>
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+        <title>Modificar Estudiante</title>
 </head>
 
 <body>
-        <form class="col-4" method="POST">
-                <h3 class="h3-registro">Registro de Estudiante</h3>
-                <?php require_once("../controlador/ControladorRegistroEstudiante.php"); ?>
-                <div class="div-registro">
-                        <label class="form-label">Nombre/s y Apellido/s</label>
-                        <input type="text" class="tablas-input" name="nombre" maxlength="50">
+        <form method="POST">
+        <nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
+                <div class="container">
+                        <a class="navbar-brand">Modificar Estudiante</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item">
+                                                <a class="nav-link" href="../GestionDeEstudiantes.php">Listado de estudiantes</a>
+                                        </li>
+                                </ul>
+
+                        </div>
                 </div>
-                <div class="div-registro">
-                        <label class="form-label">Grupo</label>
-                        <input type="text" class="tablas-input" name="grupo" maxlength="10">
+        </nav>
+
+        <main class="my-form">
+        <div class="cotainer">
+        <div class="row justify-content-center">
+                <div class="col-md-8">
+                <div class="card">
+                        <div class="card-header">Datos del estudiante</div>
+                        <?php require_once("../controlador/ControladorRegistroEstudiante.php"); ?>
+                        <div class="card-body">
+                                                <div class="form-group row">
+                                                <label for="nombre" class="col-md-4 col-form-label text-md-right">Nombres y apellidos</label>
+                                                        <div class="col-md-6">
+                                                        <input type="text" id="nombre" class="form-control" name="nombre" maxlength="50"></div>
+                                                        </div>
+
+                                                <div class="form-group row">
+                                                <label for="grupo" class="col-md-4 col-form-label text-md-right">Grupo</label>
+                                                        <div class="col-md-6">
+                                                        <input type="text" id="grupo" class="form-control" name="grupo" maxlength="10"></div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                <label for="notas" class="col-md-4 col-form-label text-md-right">Notas</label>
+                                                        <div class="col-md-6">
+                                                        <input type="text" id="notas" class="form-control" name="notas" maxlength="2"></div>
+                                                </div>
+
+                                                <div class="col-md-6 offset-md-4">
+                                                <button type="submit" class="btn btn-primary" name="boton_registro" value="enviar">Registrar estudiante</button></div>
+                                                </div>
+                                                
+                                        </form>
+                                </div>
+                        </div>
                 </div>
-                <div class="div-registro">
-                        <label class="form-label">Notas</label>
-                        <input type="text" class="tablas-input" name="notas" maxlength="2">
-                </div>
-                <button class="boton-volver"><a href="../GestionDeEstudiantes.php" style="color:white;">Volver</a></button>
-                <button type="submit" class="boton-enviar" name="boton_registro" value="enviar">Registrar</button>
-        </form>
+        </div>
+        </div>
+
+        </main>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
 
 </html>
