@@ -19,6 +19,7 @@
     <!-- BOOTSTRAP JAVASCRIPT -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <!-- Search Box -->
     <script>
         $(document).ready(function() {
             $('[data-toggle="tooltip"]').tooltip();
@@ -37,23 +38,33 @@
             });
         });
         // Confirmación de eliminar usuario
-        function asegurar() {
-            rc = confirm("¿Seguro que desea Eliminar al estudiante?");
-            return rc;
-        }
-
-        //ESTO https://www.javatpoint.com/sweetalert
-        sweetAlert({
-                title: "Are you sure?",
-                text: "You will not be able to recover this imaginary file!",
-                type: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#DD6B55",
-                confirmButtonText: "Yes, delete it!"
-            },
-            deleteIt()
-        );
+        /*  function asegurar() {
+              rc = confirm("¿Seguro que desea Eliminar al estudiante?");
+              return rc;
+          } */
     </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<!--
+    <script>
+        var eliminar = new Boolean(false);
+        //ESTO https://www.javatpoint.com/sweetalert
+
+            if (eliminar == true) {
+                swal("Eliminado!", {
+                    icon: "success",
+                });
+            } else {
+                swal("No se eliminó");
+            }
+        
+        swal({
+            title: "Estás seguro?",
+            text: "No se podrá recuperar el usuario",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        }) 
+    </script> -->
 
 </head>
 
