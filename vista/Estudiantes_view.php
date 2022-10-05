@@ -35,11 +35,12 @@
                 });
             });
         });
-
+// Confirmación de eliminar usuario
         function asegurar() {
             rc = confirm("¿Seguro que desea Eliminar al estudiante?");
             return rc;
         }
+<<<<<<< Updated upstream
 
 //ESTO https://www.javatpoint.com/sweetalert
         sweetAlert(
@@ -54,6 +55,14 @@
   deleteIt()
 );
     </script>
+=======
+        </script>
+        <script language="VBScript">
+        Sub myAlert(title, content)
+        MsgBox content, 0, title 
+        End Sub 
+        </script>
+>>>>>>> Stashed changes
 </head>
 
 <body>
@@ -104,7 +113,7 @@
                 <tbody>
                     <?php foreach ($matrizEstudiante as $estudiante) : ?>
                         <tr>
-                            <td><input class="customcheckbox" type="checkbox" value="" id="flexCheckDefault1" checked />&nbsp;&nbsp;<?php echo $estudiante['id'] ?></td>
+                            <td><input class="customcheckbox" type="checkbox" value="" id="flexCheckDefault1"/>&nbsp;&nbsp;<?php echo $estudiante['id'] ?></td>
                             <td><?php echo $estudiante['nombre'] ?></td>
                             <td><?php echo $estudiante['grupo'] ?></td>
                             <td><?php echo $estudiante['notas'] ?></td>

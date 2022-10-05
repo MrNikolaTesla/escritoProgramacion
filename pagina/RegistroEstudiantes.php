@@ -63,7 +63,7 @@
                                                 <div class="form-group row">
                                                 <label for="notas" class="col-md-4 col-form-label text-md-right">Notas</label>
                                                         <div class="col-md-6">
-                                                        <input type="text" id="notas" class="form-control" name="notas" maxlength="2"></div>
+                                                        <input type="text" id="notas" class="form-control" name="notas" maxlength="5"></div>
                                                 </div>
 
                                                 <div class="col-md-6 offset-md-4">
