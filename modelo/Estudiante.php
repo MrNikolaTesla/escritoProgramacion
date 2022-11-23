@@ -9,30 +9,30 @@ class Estudiante
         require_once("conexion.php"); //conexión
         $this->con = conectar::conexion();
     }
-
-    public function update_estudiante($id, $nombre, $grupo, $notas)
+    // Añade un nuevo estudiante a la base de datos
+    public function update_estudiante($id, $fecha, $centro, $nombre_apellido, $curso, $edad, $numero_cel, $correo)
     {
-        $sql = "UPDATE datos set nombre = '$nombre', grupo = '$grupo', notas = '$notas' WHERE id = $id";
+        $sql = "UPDATE datos set fecha = '$fecha', centro = '$centro', nombre_apellido = '$nombre_apellido', curso = '$curso', edad = '$edad', numero_cel = $numero_cel, correo = $correo, WHERE id = $id";
         $query = mysqli_query($this->con, $sql);
         return $query;
     }
 
-    /* Saca toda la información de los estudiantes cargados en la base de datos */
+    // Saca toda la información de los estudiantes cargados en la base de datos
     public function listar_estudiantes()
     {
         $sql = "SELECT * FROM datos";
         $query = mysqli_query($this->con, $sql);
         while ($filas = mysqli_fetch_array($query)) {
 
-            /* Crea una variable estudiante, la cual es un array. Ordena los valores en filas de array */
+            // Crea una variable estudiante, la cual es un array. Ordena los valores en filas de array
             $this->estudiante[] = $filas;
         }
         return $this->estudiante; //Devuelve el array
     }
 
-    public function set_estudiante($nombre, $grupo, $notas)
+    public function set_estudiante($fecha, $centro, $nombre_apellido, $curso, $edad, $numero_cel, $correo)
     {
-        $sql = "INSERT INTO datos (nombre, grupo, notas) VALUES ('$nombre', '$grupo', '$notas')";
+        $sql = "INSERT INTO datos (fecha, centro, nombre_apellido, curso, edad) VALUES ('$fecha', '$centro', '$nombre_apellido', '$curso', '$edad', '$numero_cel','$correo')";
         $query = mysqli_query($this->con, $sql);
         return $query;
     }

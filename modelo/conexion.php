@@ -13,7 +13,7 @@ class Conectar
             return $con;
         } catch (Exception $e) {
             die('Error' . $e->getMessage());
-            echo "La linea de error " . $e->getLine();
+            echo "La linea de error es:" . $e->getLine();
         }
     }
 }
