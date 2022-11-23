@@ -18,7 +18,7 @@ if (!empty($_POST["boton_registro"])) {
         $notas = $_POST["notas"];
 
         /* Busca un estudiante con las mismas variables, no es buscar repetidos, sino buscar datos iguales (exactamente iguales) */
-        $repetido = $estudiante->rep_estudiante($nombre, $grupo, $notas);
+        $repetido = $estudiante->rep_estudiante($fecha, $centro, $nombre_apellido, $curso, $edad, $numero_cel, $correo);
 
         /* rep_estudiante regresa nulo si hay datos repetidos*/
         /* null = no encuentra datos repetidos */
@@ -28,7 +28,7 @@ if (!empty($_POST["boton_registro"])) {
 
         /* Si no hay repetidos, se ingresa el estudiante */
         if ($repetido == null) {
-            $estado = $estudiante->set_estudiante($nombre, $grupo, $notas);
+            $estado = $estudiante->set_estudiante($fecha, $centro, $nombre_apellido, $curso, $edad, $numero_cel, $correo);
         }
 
         if ($estado == 1) {
