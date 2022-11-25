@@ -40,73 +40,14 @@
                 }
             });
         });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         // Confirmación de eliminar usuario, funciona cada vez que se quiere eliminar un usuario
         function asegurar() {
             rc = confirm("¿Seguro que desea Eliminar al usuario?");
             return rc;
         }
     </script>
-=======
-=======
->>>>>>> parent of 38637fd (messi)
-=======
->>>>>>> parent of 38637fd (messi)
-        // Confirmación de eliminar usuario
-        function asegurar() {
-            rc = confirm("¿Seguro que desea Eliminar al estudiante?");
-            return rc;
-        }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-        //ESTO https://www.javatpoint.com/sweetalert
-        sweetAlert({
-                title: "Are you sure?",
-                text: "You will not be able to recover this imaginary file!",
-                type: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#DD6B55",
-                confirmButtonText: "Yes, delete it!"
-            },
-            deleteIt()
-        );
-    </script>
-
->>>>>>> parent of 38637fd (messi)
-=======
-=======
-
-        //ESTO https://www.javatpoint.com/sweetalert
-        sweetAlert({
-                title: "Are you sure?",
-                text: "You will not be able to recover this imaginary file!",
-                type: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#DD6B55",
-                confirmButtonText: "Yes, delete it!"
-            },
-            deleteIt()
-        );
-    </script>
->>>>>>> parent of 38637fd (messi)
-
-        //ESTO https://www.javatpoint.com/sweetalert
-        sweetAlert({
-                title: "Are you sure?",
-                text: "You will not be able to recover this imaginary file!",
-                type: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#DD6B55",
-                confirmButtonText: "Yes, delete it!"
-            },
-            deleteIt()
-        );
-    </script>
-
->>>>>>> parent of 38637fd (messi)
 </head>
 
 <body>
