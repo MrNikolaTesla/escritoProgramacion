@@ -46,6 +46,23 @@
             rc = confirm("¿Seguro que desea Eliminar al usuario?");
             return rc;
         }
+        // Confirmación de eliminar usuario
+        function asegurar() {
+            rc = confirm("¿Seguro que desea Eliminar al estudiante?");
+            return rc;
+        }
+
+        //ESTO https://www.javatpoint.com/sweetalert
+        sweetAlert({
+                title: "Are you sure?",
+                text: "You will not be able to recover this imaginary file!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, delete it!"
+            },
+            deleteIt()
+        );
     </script>
 
 </head>
