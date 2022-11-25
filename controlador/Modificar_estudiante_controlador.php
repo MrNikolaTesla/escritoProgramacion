@@ -1,15 +1,46 @@
 <?php
-
 require_once("../modelo/Estudiante.php");
+$estudiante = new Estudiante();
 
-/* Chequea si un valor ha sido colocado, en este caso chequea el valor de id */
-if (isset($_GET['id'])) {
+// Verifica si lo solicitado está vacío
+if (!empty($_POST["modificacion"])) {
 
-    $id = $_GET['id']; // En $id se guarda la id chequeada
+    // Verifica que todos los campos tengan datos
+    if (!empty($_POST["fecha"]) and !empty($_POST["centro"]) and !empty($_POST["nombre_apellido"] and !empty($_POST["curso"]) and !empty($_POST["edad"]) and !empty($_POST["edad"]) and !empty($_POST["numero_cel"]) and !empty($_POST["correo"]))) {
 
-    $estudiante = new Estudiante(); // Instancia nuevamente el objeto
+        // Guarda los datos en cada variable
+        $id = $_POST["id"]; //Toma la id de la fila, el id no fue ingresado
+        $fecha = $_POST["fecha"];
+        $centro = $_POST["centro"];
+        $nombre_apellido = $_POST["nombre_apellido"];
+        $curso = $_POST["curso"];
+        $edad = $_POST["edad"];
+        $numero_cel = $_POST["numero_cel"];
+        $correo = $_POST["correo"];
 
-    $estudiante_modificar = $estudiante->get_data($id); //Se lleva la fila de la BD, en la que id = id
+        $repetido = $estudiante->repetido_estudiante($nombre_apellido, $numero_cel, $correo);
 
-    require_once("../vista/Modificar_view.php");
+        // Modifica los datos de estudiante, en su exacto id y verifica que los valores a modificar no sean existentes
+        if ($repetido != null) {
+            $estado = 0;
+        }
+
+        if ($repetido == null) {
+            $estado = $estudiante->actualizar_estudiante($id, $fecha, $centro, $nombre_apellido, $curso, $edad, $numero_cel, $correo);
+        }
+
+        // Regresa un 1 si la operación fue exitosa
+        if ($estado == 1) {
+            header("Location: ../index.php");
+
+        // Si la solicitud no fue procesada correctamente
+        } else if ($repetido != null) {
+            header("Location: ../index.php");
+
+        //Si la id no está seteada
+        } else {
+            header("Location: ../index.php");
+        }
+    }
 }
+?>

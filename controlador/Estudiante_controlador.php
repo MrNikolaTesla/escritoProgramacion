@@ -6,7 +6,8 @@ require_once("modelo/Estudiante.php");
 
 $estudiantes = new Estudiante();
 
-/* Variable utilizada en estudiantes_view.php, el valor de $matriz estudiante va a ser a la función listarestudiantes */
-$matrizEstudiante = $estudiantes->listar_estudiantes();
+/* Variable utilizada en AMBL_estudiantes_VISTA.php, el valor de $matriz estudiante va a ser a la función listarestudiantes */
+$matrizEstudiante = $estudiantes->listar_estudiante();
 
-require_once("vista/Estudiantes_view.php");
+require_once("vista/ABML_estudiantes_VISTA.php");
+?>
