@@ -32,7 +32,7 @@
                 <input type="text" class="form-control" name="notas" maxlength="2" value=" <?php echo $estudiante['notas'] ?>">
             </div>
         <?php } ?>
-        <button class="boton-volver"><a href="../GestionDeEstudiantes.php" style="color:white;">Volver</a></button>
+        <button class="boton-volver"><a href="../index.php" style="color:white;">Volver</a></button>
         <button type="submit" class="boton-modificar" name="modificacion" value="enviar">Modificar</button>
 
     </form>

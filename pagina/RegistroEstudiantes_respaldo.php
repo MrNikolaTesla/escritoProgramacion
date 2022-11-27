@@ -27,7 +27,7 @@
                         <label class="form-label">Notas</label>
                         <input type="text" class="tablas-input" name="notas" maxlength="2">
                 </div>
-                <button class="boton-volver"><a href="../GestionDeEstudiantes.php" style="color:white;">Volver</a></button>
+                <button class="boton-volver"><a href="../index.php" style="color:white;">Volver</a></button>
                 <button type="submit" class="boton-enviar" name="boton_registro" value="enviar">Registrar</button>
         </form>
 </body>

@@ -12,14 +12,14 @@ if (isset($_GET['id'])) {
 
     /* Regresa un 1 si la operación fue exitosa*/
     if ($estado == 1) {
-        header("Location: ../GestionDeEstudiantes.php");
+        header("Location: ../index.php");
 
         /* Si la solicitud no fue procesada correctamente */
     } else {
-        header("Location: ../GestionDeEstudiantes.php");
+        header("Location: ../index.php");
     }
 
     /*Si la id no está seteada */
 } else {
-    header("Location: ../GestionDeEstudiantes.php");
+    header("Location: ../index.php");
 }

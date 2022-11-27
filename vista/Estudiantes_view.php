@@ -38,33 +38,12 @@
             });
         });
         // Confirmación de eliminar usuario
-        /*  function asegurar() {
-              rc = confirm("¿Seguro que desea Eliminar al estudiante?");
-              return rc;
-          } */
+        function asegurar() {
+            rc = confirm("¿Seguro que desea Eliminar al estudiante?");
+            return rc;
+        }
     </script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<!--
-    <script>
-        var eliminar = new Boolean(false);
-        //ESTO https://www.javatpoint.com/sweetalert
 
-            if (eliminar == true) {
-                swal("Eliminado!", {
-                    icon: "success",
-                });
-            } else {
-                swal("No se eliminó");
-            }
-        
-        swal({
-            title: "Estás seguro?",
-            text: "No se podrá recuperar el usuario",
-            icon: "warning",
-            buttons: true,
-            dangerMode: true,
-        }) 
-    </script> -->
 
 </head>
 
@@ -104,9 +83,14 @@
                         <thead>
                             <tr>
                                 <th>#ID</th>
-                                <th>Nombre <i class="fa fa-sort"></i></th>
-                                <th>Grupo<i class="fa fa-sort"></i></th>
-                                <th>Notas <i class="fa fa-sort"></i></th>
+                                <th>Fecha <i class="fa fa-sort"></i></th>
+                                <th>Centro<i class="fa fa-sort"></i></th>
+                                <th>Documento <i class="fa fa-sort"></i></th>
+                                <th>Nombre y Apellido</th>
+                                <th>Curso<i class="fa fa-sort"></i></th>
+                                <th>Edad</th>
+                                <th>Celular <i class="fa fa-sort"></i></th>
+                                <th>Correo<i class="fa fa-sort"></i></th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
@@ -117,13 +101,18 @@
                     <?php foreach ($matrizEstudiante as $estudiante) : ?>
                         <tr>
                             <td><input class="customcheckbox" type="checkbox" value="" id="flexCheckDefault1" />&nbsp;&nbsp;<?php echo $estudiante['id'] ?></td>
-                            <td><?php echo $estudiante['nombre'] ?></td>
-                            <td><?php echo $estudiante['grupo'] ?></td>
-                            <td><?php echo $estudiante['notas'] ?></td>
+                            <td><?php echo $estudiante['fecha'] ?></td>
+                            <td><?php echo $estudiante['centro'] ?></td>
+                            <td><?php echo $estudiante['cedula'] ?></td>
+                            <td><?php echo $estudiante['nombre_apellido'] ?></td>
+                            <td><?php echo $estudiante['curso'] ?></td>
+                            <td><?php echo $estudiante['edad'] ?></td>
+                            <td><?php echo $estudiante['numero_cel'] ?></td>
+                            <td><?php echo $estudiante['correo'] ?></td>
                             <td>
                                 <a href="#" class="view" title="Ver" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                                <a href="pagina/ModificarEstudiantes_pagina.php?id=<?php echo $estudiante['id'] ?>" class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                <a href="controlador/eliminar_estudiante_controlador.php?id=<?php echo $estudiante['id'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
+                                <a href="pagina/ModificarEstudiantes_pagina.php?id=<?php echo $estudiante['id']?>" class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                <a href="controlador/eliminar_estudiante_controlador.php?id=<?php echo $estudiante['id']?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

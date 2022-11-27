@@ -6,14 +6,20 @@ $estudiante = new Estudiante();
 if (!empty($_POST["modificacion"])) {
 
     /* Verifica que todos los campos tengan datos */
-    if (!empty($_POST["nombre"]) and !empty($_POST["grupo"]) and !empty($_POST["notas"])) {
+    if (!empty($_POST["fecha"]) and !empty($_POST["centro"]) and !empty($_POST["cedula"]) and !empty($_POST["nombre_apellido"]) and !empty($_POST["curso"]) and !empty($_POST["edad"]) and !empty($_POST["numero_cel"]) and !empty($_POST["correo"])) {
 
         /* Guarda los datos en cada variable */
         $id = $_POST["id"]; //Toma la id de la fila, el id no fue ingresado
-        $nombre = $_POST["nombre"];
-        $grupo = $_POST["grupo"];
-        $notas = $_POST["notas"];
-        $repetido = $estudiante->rep_estudiante($nombre, $grupo, $notas);
+        $fecha = $_POST["fecha"];
+        $centro = $_POST["centro"];
+        $cedula = $_POST["cedula"];
+        $nombre_apellido = $_POST["nombre_apellido"];
+        $curso = $_POST["curso"];
+        $edad = $_POST["edad"];
+        $numero_cel = $_POST["numero_cel"];
+        $correo = $_POST["correo"];
+
+        $repetido = $estudiante->rep_estudiante($numero_cel, $correo);
 
         /* Modifica los datos de estudiante, en su exacto id y verifica que los valores a modificar no sean existentes */
         if ($repetido != null) {
@@ -21,20 +27,19 @@ if (!empty($_POST["modificacion"])) {
         }
 
         if ($repetido == null) {
-            $estado = $estudiante->update_estudiante($id, $nombre, $grupo, $notas);
+            $estado = $estudiante->update_estudiante($id, $fecha, $centro, $cedula, $nombre_apellido, $curso, $edad, $numero_cel, $correo);
         }
 
         /* Regresa un 1 si la operación fue exitosa*/
         if ($estado == 1) {
-            header("Location: ../GestionDeEstudiantes.php");
-
+            echo "Se supone que esto sí funcionó (Verificar si modificó en verdad!)";
             /* Si la solicitud no fue procesada correctamente */
         } else if ($repetido != null) {
-            header("Location: ../GestionDeEstudiantes.php");
+            echo "Ocurrió un error";
 
             /*Si la id no está seteada */
         } else {
-            header("Location: ../GestionDeEstudiantes.php");
+            echo "La ID no está seteada!";
         }
     }
 }
